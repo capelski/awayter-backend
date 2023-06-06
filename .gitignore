@@ -1,6 +1,7 @@
 dist
 node_modules
 .env
+env-variables.yaml
 
 # The LOCAL_STORAGE_FOLDER folder needs to be excluded from git
 storage

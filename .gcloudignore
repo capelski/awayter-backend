@@ -1,0 +1,16 @@
+.git/
+.vscode/
+node_modules/
+src/
+storage/
+test/
+.env
+.env.template
+.eslintrc.js
+.gcloudignore
+.gitignore
+.prettierrc
+env-variables.yaml.template
+README.md
+tsconfig.build.json
+tsconfig.json
