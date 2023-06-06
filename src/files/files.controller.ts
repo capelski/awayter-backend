@@ -4,6 +4,7 @@ import {
   Get,
   HttpException,
   Inject,
+  Logger,
   Post,
   Req,
 } from '@nestjs/common';
@@ -16,6 +17,7 @@ import { ApiBody, ApiOperation, ApiQuery, ApiResponse } from '@nestjs/swagger';
 export class FilesController {
   constructor(
     @Inject(FILES_OPERATIONS) private filesOperations: FilesOperations,
+    private readonly logger: Logger,
   ) {}
 
   @Get('/get-file')
@@ -52,7 +54,7 @@ export class FilesController {
       const fileContent = await this.filesOperations.getFileContent(fileName);
       return JSON.parse(fileContent);
     } catch (error) {
-      console.error(error);
+      this.logger.error(error);
       throw new HttpException(
         {
           message: `An unexpected error ocurred while retrieving the file ${fileName}`,
@@ -102,7 +104,7 @@ export class FilesController {
       );
       return content;
     } catch (error) {
-      console.error(error);
+      this.logger.error(error);
       throw new HttpException(
         {
           message: `An unexpected error ocurred while updating the file ${fileName}`,
