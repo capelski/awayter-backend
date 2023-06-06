@@ -1,2 +1,6 @@
 dist
 node_modules
+.env
+
+# The LOCAL_STORAGE_FOLDER folder needs to be excluded from git
+storage
