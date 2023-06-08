@@ -18,7 +18,9 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "gcp-build": ""
+    "gcp-build": "",
+    "docker:build": "docker build . -t l3bowski/awayter-backend",
+    "docker:run": "docker run --name awayter -p 3000:3000 -v ./storage:/usr/src/app/storage --env-file .env.docker -d l3bowski/awayter-backend"
   },
   "dependencies": {
     "@google-cloud/storage": "^6.11.0",

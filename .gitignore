@@ -2,7 +2,9 @@ coverage
 dist
 node_modules
 .env
+.env.docker
 env-variables.yaml
+npm-debug.log
 
 # The LOCAL_STORAGE_FOLDER folder needs to be excluded from git
 storage

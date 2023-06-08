@@ -3,3 +3,4 @@ env_variables:
   GCLOUD_STORAGE_BUCKET: bucket-name
 
 # Copy this file in your local environment and rename it to "env-variables.yaml"
+# to run "gcloud app deploy"
