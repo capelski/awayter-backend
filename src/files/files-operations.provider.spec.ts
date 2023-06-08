@@ -36,7 +36,7 @@ describe('filesOperationsProviderCore', () => {
     const filesOperations = filesOperationsProviderCore(
       'local',
       undefined,
-      'folder',
+      'storage',
     );
     expect(filesOperations instanceof LocalFilesService).toBe(true);
   });
